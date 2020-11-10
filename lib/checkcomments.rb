@@ -30,7 +30,10 @@ class CheckComments
     unless @lines[0].match(period)
         @errors.push("On line 1 of your code you don't have a period".red)
     end
+    @errors
   end
+
+  # def findsemicolond
 
 
 

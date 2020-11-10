@@ -24,12 +24,21 @@ RSpec.describe  'check if there are comments ' do
    let(:tome) {CheckComments.new(['/*', '/*'])}
    let(:comments) {tome.comments}
    let(:clean) {comments('./css/nobugs.css')}
+   let(:period){tome.initialperiod}
+  #  let(:period){CheckComments.new.initialperiod(@errors)}
    
   
   
    context 'will check if there are comments' do
     it ' will check if there are comments ' do
       silence { expect(comments).to eq([1, 2]) }
+    end
+  end
+
+  context 'will check for initial period' do
+    it 'will check for the opening period' do
+      silence { expect(period).not_to eq(true) }
+      # silence { expect(period).to eq(["\e[0;31;49mOn line 1 of your code you don't have a period\e[0m"]) }
     end
   end
 end
