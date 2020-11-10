@@ -15,7 +15,7 @@ class CheckComments
   def comments
     index_array =[]
     read = OpenTheFile.new('./css/testing.css')
-    read.open_the_file.each_with_index do |line,index|
+    # read.open_the_file.each_with_index do |line,index|
     @errros_array= read.open_the_file.each_with_index do |line,index|
     # @errros_array= read.readfile_content.each_with_index do |line,index|
       # puts "#{index},#{line}"
@@ -26,16 +26,9 @@ class CheckComments
         # puts "You have commented lines on lines #{index}".red 
       end
     end
-    @errors
-    # index_array
-    
+    puts @errors
+    index_array
   end
-
-  # def displayarray
-    # include comments
-    # index_array
-  end
-
 end
 
 comentarios = CheckComments.new

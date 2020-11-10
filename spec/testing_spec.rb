@@ -29,8 +29,8 @@ RSpec.describe  'check if there are comments ' do
    context 'will check if there are comments' do
     it ' will check if there are comments ' do
       # tome = CheckComments.new
-      # silence{expect(comments).to eq([2,3,4,12])}
-      silence{expect(comments).to eq(comments[1])}
+      silence{expect(comments).to eq([2,3,4,12])}
+      # silence{expect(comments).to eq(comments[1])}
     end
   end
 end
