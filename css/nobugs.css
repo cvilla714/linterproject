@@ -1,0 +1,12 @@
+.logo_img {
+    background-color: #f42;
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    display: none;
+    height: 45px;
+    padding: 16px 20px;
+    width: 106px;
+    position: absolute;
+    top: -13px;
+    left: 0;
+  }
+  

@@ -1,6 +1,6 @@
 require 'colorize'
 require_relative '../lib/checkcomments'
-# linter = OpenTheFile.new(ARGV.first)
+readit = OpenTheFile.new(ARGV.first)
 
 
 
