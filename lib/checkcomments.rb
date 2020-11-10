@@ -5,34 +5,27 @@ require_relative 'open'
 class CheckComments
   attr_reader :errors, :errors_array
 
-  def initialize
+  def initialize(lines)
     # @sentence = sentence
     @errors_array = []
-    @errors= []
+    @errors = []
+    @lines = lines
   end
 
-
   def comments
-    index_array =[]
-    read = OpenTheFile.new('./css/testing.css')
-    # read.open_the_file.each_with_index do |line,index|
-    @errros_array= read.open_the_file.each_with_index do |line,index|
-    # @errros_array= read.readfile_content.each_with_index do |line,index|
-      # puts "#{index},#{line}"
+    @lines.each_with_index do |line, index|
       if line.include?('/*')
-      # if line.scan(%r{/\A\/\*/}) && line.scan(%r{/\*\/\z/})
-      index_array.push(index+1) 
-      @errors.push("On line #{index+1} you have this commented code #{line}".red)
-        # puts "You have commented lines on lines #{index}".red 
+        @errors_array.push(index + 1 )
+        @errors.push("On line #{index + 1} you have this commented code #{line}".red)
       end
     end
     puts @errors
-    index_array
+    @errors_array
   end
 end
 
-comentarios = CheckComments.new
-puts comentarios.comments
+# comentarios = CheckComments.new
+# puts comentarios.comments
 # puts comentarios.displayarray
 # puts comentarios.errors
 

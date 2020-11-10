@@ -21,24 +21,19 @@ end
 
 
 RSpec.describe  'check if there are comments ' do
-   let(:tome){CheckComments.new} 
-   let(:comments){tome.comments}
-   let(:clean){tome.comments()}
+   let(:tome) {CheckComments.new(['/*', '/*'])}
+   let(:comments) {tome.comments}
+   let(:clean) {comments('./css/nobugs.css')}
+   
   
   
    context 'will check if there are comments' do
     it ' will check if there are comments ' do
-      # tome = CheckComments.new
-      silence{expect(comments).to eq([2,3,4,12])}
-      # silence{expect(comments).to eq(comments[1])}
+      silence { expect(comments).to eq([1, 2]) }
     end
   end
 end
 
-  # context 'will check if there are not comments' do
-    # it 'will check if there are no comments'
-    # silence {expect()
-# end
 
 RSpec.describe 'check if the file exists' do
 
