@@ -11,4 +11,3 @@ class OpenTheFile
     lines
   end
 end
-

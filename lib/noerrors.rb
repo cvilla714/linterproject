@@ -13,8 +13,8 @@ class NoErrors
   def noerrors
     period = /^\./
     message = ''
-    @lines.each_with_index do |_ride, _index|
-      message = 'NO Errors, file is Clean'.green if @lines[0].match(period) && _ride.include?(';')
+    @lines.each_with_index do |item, _index|
+      message = 'NO Errors, file is Clean'.green if @lines[0].match(period) && item.include?(';')
     end
     message
   end

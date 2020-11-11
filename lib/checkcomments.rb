@@ -37,4 +37,3 @@ class CheckErrors
     @errors
   end
 end
-
