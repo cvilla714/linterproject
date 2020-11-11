@@ -45,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 
 - You will need to install a few gems to run the project but here are the step by step instructions
-- Please run this in your terminal bundle install. This will install of the dependecies for the project
+- Please run this in your terminal bundle install. This will install all of the dependecies for the project
 ![screenshot](./pictures/runbundleinstall.png)
 
 - In your terminal please type the command gem install colorize . Note: You may need to use sudo to install gems
