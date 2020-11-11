@@ -3,7 +3,6 @@ class OpenTheFile
 
   def initialize(file)
     @file = file
-    # @nofile =File.exists?
   end
 
   def open_the_file
