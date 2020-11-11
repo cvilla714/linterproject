@@ -29,8 +29,6 @@ class CheckErrors
   end
 
   def findsemicolond
-    # puts @lines
-    # semi = /;$/
     @lines.each_with_index do |item, index|
       unless item.delete(' ').include?('{') || item.delete(' ').include?('}') || item =~ /\A\s*\Z/ || item.include?(';')
         @errors.push("On line #{index + 1} you are missing a semicolon".red)
@@ -38,21 +36,5 @@ class CheckErrors
     end
     @errors
   end
-
-  # def noerrors
-  # period = /^\./
-  # @lines.each_with_index do |ride, _index|
-  # if !ride.include?('/*') && @ride[0].match(period) && ride.include?(';')
-  # @errors.push 'NO Errors, file is Clean'.green
-  # end
-  # message
-  # end
-  # @errros
-  # end
 end
 
-# comentarios = CheckErrors.new(lines)
-# puts comentarios.comments
-# puts comentarios.initialperiod
-# puts comentarios.displayarray
-# puts comentarios.errors

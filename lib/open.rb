@@ -12,6 +12,3 @@ class OpenTheFile
   end
 end
 
-# readingfile = OpenTheFile.new('./css/testing.css')
-# puts readingfile.open_the_file.class
-# puts readingfile.open_the_file
