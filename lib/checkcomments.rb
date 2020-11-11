@@ -1,4 +1,5 @@
 require 'colorize'
+# rubocop:disable Lint/Void:
 # require './css/testing.css'
 require_relative 'open'
 
@@ -37,3 +38,4 @@ class CheckErrors
     @errors
   end
 end
+# rubocop:enable Lint/Void:
