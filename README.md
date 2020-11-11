@@ -51,6 +51,12 @@ To get a local copy up and running follow these simple example steps.
 - In order to use the program you will need to provide the css file you want to evaluate plesae type this command
 - ruby bin/main.rb {filename} without the curly braces and just replace filename for the file you want to test
 ![screenshot](./pictures/runtheprogram.png)
+- Now this are the examples of good practice vs bad practice so you can have an idea of what the program is evaluating
+Bad Practice
+![screenshot](./pictures/bad_practice.png)
+
+Good Practice
+![screenshot](./pictures/good_practice.png)
 
 ### Run tests
 
