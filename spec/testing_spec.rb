@@ -1,7 +1,7 @@
 require 'colorize'
-require './lib/open'
-require './lib/checkcomments'
-require './lib/noerrors'
+require_relative '../lib/open'
+require_relative '../lib/checkcomments'
+require_relative '../lib/noerrors'
 
 def silence
   # Store the original stderr and stdout in order to restore them later
