@@ -27,16 +27,16 @@ To get a local copy up and running follow these simple example steps.
 - Then you can open your terminal and type git clone + the link you got from clicking the button clone
 ![screenshot](./pictures/clonetheproject.png)
 
-- Once you a copy of the repo you have to navigate into the folder you cloned
+- Once you get a copy of the repo you have to navigate into the folder you cloned
 ![screenshot](./pictures/accesstheproject.png)
 
-- You will need to run a few commands before you get to test it but don't worry just folow the instructions step by step
+- You will need to run a few commands before you get to test it but don't worry just follow the instructions step by step
 
 - When the require gems are finally installed you can choose to open the project with any Code Editor of your choice.
 
 ### Prerequisites
 
-- You will need Ruby install in your machine
+- You will need Ruby installed in your machine
 
 ![screenshot](./pictures/ruby.png)
 
@@ -45,19 +45,14 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 
 - You will need to install a few gems to run the project but here are the step by step instructions
-- Please run this in your terminal bundle install. This will install all of the dependecies for the project
+- Please run this in your terminal `bundle install`. This will install all of the dependecies for the project
 ![screenshot](./pictures/runbundleinstall.png)
 
-- In your terminal please type the command gem install colorize . Note: You may need to use sudo to install gems
-![screenshot](./pictures/installcolorize.png)
-
-- Onde you are done installing the colorize gem please move to the next step and type this command gem install rspec
-![screenshot](./pictures/installrspec.png)
 
 
 ### Usage
 
-- In order to use the program you will need to provide the css file you want to evaluate plesae type this command
+- In order to use the program you will need to provide the css file you want to evaluate please type this command
 - ruby bin/main.rb {filename} without the curly braces and just replace filename for the file you want to test
 ![screenshot](./pictures/runtheprogram.png)
 

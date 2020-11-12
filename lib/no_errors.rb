@@ -10,7 +10,7 @@ class NoErrors
     @lines = lines
   end
 
-  def noerrors
+  def no_errors
     period = /^\./
     message = ''
     @lines.each_with_index do |item, _index|

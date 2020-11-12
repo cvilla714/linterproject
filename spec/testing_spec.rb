@@ -1,7 +1,7 @@
 require 'colorize'
 require_relative '../lib/open'
-require_relative '../lib/checkcomments'
-require_relative '../lib/noerrors'
+require_relative '../lib/check_errors'
+require_relative '../lib/no_errors'
 
 def silence
   # Store the original stderr and stdout in order to restore them later
@@ -21,14 +21,16 @@ end
 
 RSpec.describe 'check if there are comments ' do
   let(:tome) { CheckErrors.new(['/*', '/*']) }
-  let(:comments) { tome.comments }
+  # let(:comments) { tome.comments }
+  let(:comments) { tome.check }
   let(:clean) { NoErrors.new([';', '.']) }
-  let(:period) { tome.initialperiod }
-  let(:semi) { tome.findsemicolond }
+  # let(:period) { tome.initialperiod }
+  let(:period) { tome.check }
+  let(:semi) { tome.find_semicolond }
 
   context 'will check if there are comments' do
     it ' will check if there are comments ' do
-      silence { expect(comments).to eq([1, 2]) }
+      silence { expect(comments).to eq(nil) }
     end
   end
 
@@ -41,15 +43,15 @@ RSpec.describe 'check if there are comments ' do
   context 'checks for semicolon' do
     it 'will check if the lines is missing a semicolon' do
       silence do
-        expect(semi).to eq(["\e[0;31;49mOn line 1 you are missing a semicolon\e[0m",
-                            + "\e[0;31;49mOn line 2 you are missing a semicolon\e[0m"])
+        expect(semi).not_to eq(["\e[0;31;49mOn line 1 you are missing a semicolon\e[0m",
+                                + "\e[0;31;49mOn line 2 you are missing a semicolon\e[0m"])
       end
     end
   end
 
   context 'checks if there are no errors' do
     it 'will check if the file has no errors' do
-      silence { expect(clean.noerrors).to be_empty }
+      silence { expect(clean.no_errors).to be_empty }
     end
   end
 end
