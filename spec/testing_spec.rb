@@ -21,10 +21,8 @@ end
 
 RSpec.describe 'check if there are comments ' do
   let(:tome) { CheckErrors.new(['/*', '/*']) }
-  # let(:comments) { tome.comments }
   let(:comments) { tome.check }
   let(:clean) { NoErrors.new([';', '.']) }
-  # let(:period) { tome.initialperiod }
   let(:period) { tome.check }
   let(:semi) { tome.find_semicolond }
 
