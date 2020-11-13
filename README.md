@@ -1,8 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Linter for CSS
 
-> One paragraph statement about the project.
+> This project was mainly around creating a linter that will
+> check for comments, missing semicolons at the end of every line
+> and also checking for the initial period to designate a class
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,50 +12,73 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
+- RSpec gem
+- Colorize gem
+- VS Code
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
+- For starters you are going to need to clone the repo by clicking on the green button on top right corner that says "code"
+![screenshot](./pictures/greenbutton.png)
+
+- Then you can open your terminal and type git clone + the link you got from clicking the button clone
+![screenshot](./pictures/clonetheproject.png)
+
+- Once you get a copy of the repo you have to navigate into the folder you cloned
+![screenshot](./pictures/accesstheproject.png)
+
+- You will need to run a few commands before you get to test it but don't worry just follow the instructions step by step
+
+- When the require gems are finally installed you can choose to open the project with any Code Editor of your choice.
 
 ### Prerequisites
 
-### Setup
+- You will need Ruby installed in your machine
+
+![screenshot](./pictures/ruby.png)
+
+- You will need need a Code Editor
 
 ### Install
 
+- You will need to install a few gems to run the project but here are the step by step instructions
+- Please run this in your terminal `bundle install`. This will install all of the dependecies for the project
+![screenshot](./pictures/runbundleinstall.png)
+
+
+
 ### Usage
+
+- In order to use the program you will need to provide the css file you want to evaluate please type this command
+- ruby bin/main.rb {filename} without the curly braces and just replace filename for the file you want to test
+![screenshot](./pictures/runtheprogram.png)
+
+- Now this are the examples of good practice vs bad practice so you can have an idea of what the program is evaluating
+- Bad Practice
+
+![screenshot](./pictures/bad_practice.png)
+
+- Good Practice
+
+![screenshot](./pictures/good_practice.png)
 
 ### Run tests
 
-### Deployment
+- In order to run the RSpec you will need to type the following command in your terminal rspec 
 
+![screenshot](./pictures/rspec.png)
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Devkc**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- Github: [@cvilla714](https://github.com/cvilla714)
+- Twitter: [@kckeyti](https://twitter.com/kckeyti)
+- Linkedin: [linkedin Profile](https://www.linkedin.com/in/cosmel-villalobos-1900531aa/)
 
 ## 🤝 Contributing
 
@@ -64,13 +89,3 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
