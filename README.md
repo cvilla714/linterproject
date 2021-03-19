@@ -5,6 +5,8 @@
 > This project was mainly around creating a linter that will
 > check for comments, missing semicolons at the end of every line
 > and also checking for the initial period to designate a class
+> it displays the information back to the user where the mistake is 
+> showing if the line has commented code as well.
 
 ![screenshot](./app_screenshot.png)
 
